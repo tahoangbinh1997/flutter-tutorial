@@ -26,11 +26,29 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(this.title),
+        backgroundColor: Colors.red,
+        toolbarHeight: 120,
+      ),
+      body: HomeContentPage(title: 'Hahaha')
+    );
+  }
+}
+
+class HomeContentPage extends StatelessWidget {
+  HomeContentPage({ Key? key, this.title = '' }) : super(key: key);
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(this.title),
       ),
       body: Center(
         child:
           Text(
-            'Hello World',
+            'Home Page Center'
           )
       )
     );
